@@ -1,0 +1,47 @@
+---
+title: "lab5"
+author: "Vitalii Borysov"
+date: "15/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Include R file
+
+```{r sourceCode,echo=TRUE}
+source("pmean.R")
+```
+
+
+1. Pmean
+
+```{r}
+pmean("specdata", "sulfate", 1:10)
+pmean("specdata", "sulfate", 55)
+pmean("specdata", "nitrate")
+```
+
+2. Complete
+
+```{r}
+complete("specdata", 1)
+complete("specdata", c(2, 4, 8, 10, 12))
+complete("specdata", 50:60)
+```
+
+3. Corr
+
+```{r}
+cr <- corr("specdata", 150)
+head(cr); summary(cr)
+
+cr <- corr("specdata", 400)
+head(cr); summary(cr)
+
+cr <- corr("specdata", 5000)
+head(cr); summary(cr)
+```
+

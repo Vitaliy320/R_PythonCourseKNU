@@ -1,0 +1,75 @@
+---
+title: "lab4"
+author: "Vitalii Borysov"
+date: "15/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Read data
+
+```{r}
+read_data <- read.csv("hw1_data.csv")
+```
+
+1.
+
+```{r}
+names(read_data)
+```
+
+2.
+
+```{r}
+head(read_data, 6)
+```
+
+3.
+
+```{r}
+nrow(read_data)
+```
+
+4.
+
+```{r}
+tail(read_data, 10)
+```
+
+5.
+
+```{r}
+length(read_data$Ozone[is.na(read_data$Ozone)])
+```
+
+6.
+
+```{r}
+mean(read_data$Ozone[!is.na(read_data$Ozone)])
+```
+
+7.
+
+```{r}
+mean(read_data[read_data$Ozone > 31 & read_data$Temp>90,]$Solar.R[!is.na(read_data[read_data$Ozone > 31 & read_data$Temp>90,]$Solar.R)])
+```
+
+8.
+
+```{r}
+mean(read_data[read_data$Month == 6,]$Temp[!is.na(read_data[read_data$Month == 6,]$Temp)])
+```
+
+9.
+
+```{r}
+max(read_data[read_data$Month == 5,]$Ozone[!is.na(read_data[read_data$Month == 5,]$Ozone)])
+```
+
+
+
+
+
